@@ -1,4 +1,4 @@
-package personnages;
+package personnages.principaux;
 
 public class Humain {
 	
@@ -31,21 +31,20 @@ public class Humain {
 	}
 	public void acheter(String bien, int prix) {
 		if (argent>prix) {
-			int budget = this.argent;
-			this.perdreArgent(prix);
-			this.parler( "J'ai " + budget + " sous en poche."
+			this.parler( "J'ai " + argent + " sous en poche."
 					+ " Je vais pouvoir m'offrir " + bien + 
 					" à " + prix + "sous.");
+			this.perdreArgent(prix);
 		} else {
 			this.parler( "Je n'ai plus que " + argent + " sous en poche. "
 					+ "Je ne peux même pas m'offrir " + bien + 
 					" à " + prix + " sous.");
 		}	
 	}
-	private void gagnerArgent(int gain) {
+	public void gagnerArgent(int gain) {
 		this.argent += gain;
 	}
-	private void perdreArgent(int perte) {
+	public void perdreArgent(int perte) {
 		this.argent -= perte;
 	}
 }
