@@ -10,7 +10,13 @@ public class HistoireTP5 {
 		Commercant kumi = new Commercant("Kumi", 10);
 		Yakuza yaku = new Yakuza("Yaku Le Noir",30 ,"whisky", "Warsong");
 		Ronin roro = new Ronin("Roro",60 , "shochu");
-
+		marco.faireConnaissanceAvec(roro);
+		marco.faireConnaissanceAvec(yaku);
+		marco.faireConnaissanceAvec(chonin);
+		marco.faireConnaissanceAvec(kumi);
+		marco.listerConnaissance();
+		roro.listerConnaissance();
+		yaku.listerConnaissance();
 	}
 
 }
