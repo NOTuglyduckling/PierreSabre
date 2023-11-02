@@ -39,4 +39,10 @@ public class Yakuza extends Humain{
 			" ? Je l'ai dépouillé de ses " + gain + " sous.");
 		this.gagnerArgent(gain);
 	}
+	
+	@Override
+	public void direBonjour() {
+		this.direBonjour();
+		parler("Mon clan est celui de " + clan + ".");
+	}
 }
