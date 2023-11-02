@@ -65,5 +65,6 @@ public class Humain {
 		direBonjour();
 		autreHumain.direBonjour();
 		
+		
 	}
 }
