@@ -1,14 +1,17 @@
 package personnages.principaux;
 
 public class Samourai extends Humain{
+	
+	private String maitre;
 
-	public Samourai(String nom, int argent, String boissonFavorite) {
+	public Samourai(String maitre, String nom, String boissonFavorite, int argent) {
 		super(nom,argent,boissonFavorite);
+		this.maitre = maitre;
 	}
 	@Override
 	public void direBonjour() {
-		this.direBonjour();
-		parler("Je suis fier de servir le seigneur Miyamoto.");
+		super.direBonjour();
+		parler("Je suis fier de servir le seigneur " + maitre + ".");
 	}
 	public void boire(String boisson) {
 		parler("Qu'est-ce que je vais choisir comme boisson ? Tiens je vais prendre\r\n"

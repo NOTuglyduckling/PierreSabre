@@ -2,13 +2,12 @@ package personnages.principaux;
 
 public class Yakuza extends Humain{
 	
-	private int reputation;
+	private int reputation = 0;
 	private String clan;
 	
-	public Yakuza(String nom, int argent,String boissonFavorite, String clan) {
+	public Yakuza(String clan, String nom,String boissonFavorite, int argent ) {
 		super(nom,argent,boissonFavorite);
 		this.clan = clan;
-		this.reputation = 0 ;
 		}
 	
 	public int getReputation() {
@@ -42,7 +41,7 @@ public class Yakuza extends Humain{
 	
 	@Override
 	public void direBonjour() {
-		this.direBonjour();
+		super.direBonjour();
 		parler("Mon clan est celui de " + clan + ".");
 	}
 }
